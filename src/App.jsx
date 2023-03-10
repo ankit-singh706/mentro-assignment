@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import data from "./assets/data.js";
-import Rate from "./components/Ratings/Ratings";
+import Rate from "./components/Ratings/Ratings";     
 import { FaLongArrowAltDown, FaLongArrowAltUp } from "react-icons/fa";
+import { Fade, Rotate } from "react-awesome-reveal";
 
 function App() {
   const [currentId, setCurrentId] = useState(1);
@@ -35,6 +36,7 @@ function App() {
   return (
     <div className="main__container">
       <div className="main__text__content">
+        <Fade cascade damping={0.01} direction="left">
         {data.map((detail) => {
           if (currentId === detail.id)
             return (
@@ -56,6 +58,7 @@ function App() {
               </>
             );
         })}
+      </Fade>
       </div>
 
       <div className="side__slider__content">
@@ -109,10 +112,12 @@ function App() {
             </div>
           </div>
           <div className="slider__display__picture">
+          <Rotate>
             {data.map((detail) => {
               if (currentId == detail.id)
                 return <img src={detail.image} alt="" />;
             })}
+          </Rotate> 
           </div>
           <div
             className="right__handler"
@@ -124,10 +129,14 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="slider__display__holder">
         <div className="slider__display__name">
+        <Fade cascade damping={0.03} direction="left">
           {data.map((detail) => {
-            if (currentId == detail.id) return <span>{detail.name}</span>;
+            if (currentId == detail.id) return <span className="ml-10">{detail.name}</span>;
           })}
+        </Fade>
+        </div>
         </div>
       </div>
     </div>
