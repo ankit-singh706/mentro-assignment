@@ -83,7 +83,7 @@ body{
   border-radius: 50%;
   height: 1200px;
   width: 75%;
-  left: 440px;
+  left: 67vh;
   position: absolute;
   
 }
@@ -116,17 +116,17 @@ body{
 .slider__image{
   position: absolute;
   top: -55px;
-  left: 435px;
+  left: 66vh;
 }
 
 .img2{
-  left: 220px;
-  top:-10px;
+  left:34vh;
+  top:0vh;
 }
 
 .img3{
-  left: 645px;
-  top: -10px;
+  left: 100vh;
+  top: -8px;
 }
 
 .slider__image img{
@@ -152,7 +152,7 @@ body{
 }
 
 .slider__display__picture img{
-  margin-top: 70px;
+  margin-top: 15vh;
   height: 200px;
   width: 200px;
   object-fit: cover;
@@ -183,4 +183,3 @@ body{
 .slider__display__holder{
   margin-left: 41px;
 }
-
